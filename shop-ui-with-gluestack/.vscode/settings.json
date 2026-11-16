@@ -1,7 +1,49 @@
 {
+  // Save: stop heavy actions from running on every save
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "explicit",
-    "source.sortMembers": "explicit"
-  }
+    "source.organizeImports": "never",
+    "source.fixAll": "never"
+  },
+
+  // Make sure suggestions are on
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "on"
+  },
+  "editor.suggestOnTriggerCharacters": true,
+
+  // TypeScript server: give it more memory and less background work
+  "typescript.tsserver.maxTsServerMemory": 4096,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+
+  // Don't watch or scan heavy folders
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.next/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/.expo/**": true,
+    "**/android/build/**": true,
+    "**/ios/Pods/**": true,
+    "**/target/**": true,
+    "**/.git/objects/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/.expo": true,
+    "**/target": true
+  },
+  "search.followSymlinks": false,
+
+  // Lighter UI and git
+  "editor.minimap.enabled": false,
+  "git.autoRepositoryDetection": "openEditors",
+  "extensions.autoUpdate": false
 }

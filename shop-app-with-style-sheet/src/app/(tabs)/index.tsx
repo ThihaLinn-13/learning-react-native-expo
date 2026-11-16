@@ -78,7 +78,6 @@ export default function Home() {
           numColumns={numOfColumn}
           showsHorizontalScrollIndicator={false}
           data={products}
-          keyExtractor={(item) => item.id.toString()}
           // columnWrapperStyle={{ paddingHorizontal: PADDING, gap: GAP }}
           contentContainerStyle={{ paddingHorizontal: PADDING, gap: GAP }}
           renderItem={({ item, index }) => {
